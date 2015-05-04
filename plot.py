@@ -17,7 +17,11 @@ def plot():
     # plot
     plt.plot(x, y)
     # beautify the x-labels
-    plt.gcf().autofmt_xdate()
+    fig = plt.gcf()
+    fig.autofmt_xdate()
+    fig.set_dpi(300)
+    fig.set_size_inches(21, 7)
+    fig.set_tight_layout(True)
 
     plt.savefig(OUTPUT_FILE)
 
